@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    /* display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center; */
+    background-image: linear-gradient(to right, rgb(97, 97, 215), white);
+}
+
+
+h1 {
+    margin: 0px;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.gameSection {
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px black;
+    /* border: 2px solid gray; */
+    margin: 0px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-image: linear-gradient(to right, rgb(199, 18, 48), yellow);
+    width: 400px;
+    height: 400px;
+}
+
+
+.gameSection div {
+    box-shadow: 6px 6px 10px #00b0fc;
+    /* border: 2px solid gray; */
+    background-color: gray;
+    /* color: red; */
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    cursor: pointer;
+    text-align: center;
+    font-size: 150px;
+}
+
+
+span{
+    color: greenyellow;
+    font-size: 40px;
+}
+
+#partition{
+    display: flex;
+    justify-content: space-around;
+}
+
+#gamePart{
+    margin: 0px;
+    text-align: center;
+    font-size: 48px;
+    /* color: green; */
+}
+
+#playerSection{
+    display: none;
+    text-align: center;
+}
+
+#playerSection span{
+    margin: 20px;
+}
+
+#userPart{
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: black;
+    width: 250px;
+    height: 250px;
+}
+
+#userPart div{
+    box-shadow: 4px 4px 8px white;
+    border: 2px solid #09152b;
+    background-color: red;
+    color: greenyellow;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    cursor: pointer;
+    text-align: center;
+    font-size: 80px;
+}
+
+@media ((max-width:1000px)) {
+    #partition{
+        align-items: center;
+        flex-direction: column;
+    }
+    section{
+        margin: 20px 0px;
+    }
+
+}
+
+@media (max-width : 540px) {
+    .gameSection{
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-image: linear-gradient(to right, rgb(199, 18, 48), yellow);
+        width: 250px;
+        height: 250px;
+    }
+    .gameSection div{
+        box-shadow: 6px 6px 10px #00b0fc;
+        /* border: 2px solid #0286df; */
+        background-color: gray;
+        /* color: red; */
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        cursor: pointer;
+        text-align: center;
+        font-size: 80px;
+    }
+    
+}
+
+
+
