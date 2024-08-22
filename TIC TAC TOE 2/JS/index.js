@@ -20,12 +20,12 @@ embed.src = "./SONG/stranger-things-124008.mp3";
 embed.style.visibility = 'hidden';
 
 
-// while (!player1) {
-//     player1 = prompt("Enter your name who's taking X'S");
-// }
-// while (!player2) {
-//     player2 = prompt("Enter your name who's taking 0'S");
-// }
+while (!player1) {
+    player1 = prompt("Enter your name who's taking X'S");
+}
+while (!player2) {
+    player2 = prompt("Enter your name who's taking 0'S");
+}
 
 // x - green 0 - white
 

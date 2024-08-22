@@ -223,7 +223,7 @@ function computerChoice(arr) {
             if (!(arr[num] === 'X' || arr[num] === '0')) {
                 return num;
             }
-            else if (count === 8) {
+            else if (count === 9) {
                 break;
             }
 
@@ -236,6 +236,12 @@ function computerEnter() {
     let num = computerChoice(arr);
     let element = document.getElementById(cell[parseInt(num)]);
     element.innerText = computerSelect;
+    if(computerSelect === 'X'){
+        element.style.color = 'green';
+    }
+    else{
+        element.style.color = 'white';
+    }
     val = userChoice;
     arr[parseInt(num)] = computerSelect;
     span.innerText = player1 + ' turn ' + ' with ' + " " + userChoice;
@@ -394,6 +400,7 @@ function winner() {
         // gamePart.innerText = 'GAME OVER';
     }
     else if (noWinner === noEmptyCell()) {
+        document.body.append(embed);
         winnerSpan.innerText = 'tie!';
         gamePart.style.display = 'none';
         playerSection.style.display = 'block';
@@ -415,24 +422,37 @@ function check(index) {
 }
 
 span.innerText = player1 + ' turn ' + ' with ' + " " + userChoice;
-let val = userChoice;
+let val = 'X';
 function forCell1() {
     if (val === userChoice) {
         if (check(0)) {
-            val = computerSelect;
+            // val = computerSelect;
             span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
             arr[0] = userChoice;
+            if(userChoice === 'X'){
+                cell1.style.color = 'green';
+            }
+            else{
+                cell1.style.color = 'white';
+            }
             cell1.innerText = userChoice;
+            // cell1.style.color = 'green';
             winner();
             computerEnter();
         }
     }
     else {
         if (check(0)) {
-            val = userChoice;
-            span.innerText = player1 + ' turn ' + ' with ' + " " + userChoice;
-            arr[0] = computerSelect;
-            cell1.innerText = computerSelect;
+            if(userChoice === 'X'){
+                cell1.style.color = 'green';
+            }
+            else{
+                cell1.style.color = 'white';
+            }
+            // val = userChoice;    
+            span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
+            arr[0] = userChoice;
+            cell1.innerText = userChoice;
             winner();
             computerEnter();
         }
@@ -441,7 +461,13 @@ function forCell1() {
 function forCell2() {
     if (val === userChoice) {
         if (check(1)) {
-            val = computerSelect;
+            if(userChoice === 'X'){
+                cell2.style.color = 'green';
+            }
+            else{
+                cell2.style.color = 'white';
+            }
+            // val = computerSelect;
             span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
             arr[1] = userChoice;
             cell2.innerText = userChoice;
@@ -451,10 +477,16 @@ function forCell2() {
     }
     else {
         if (check(1)) {
+            if(userChoice === 'X'){
+                cell2.style.color = 'green';
+            }
+            else{
+                cell2.style.color = 'white';
+            }
             val = userChoice;
-            span.innerText = player1 + ' turn ' + ' with ' + " " + userChoice;
-            arr[1] = computerSelect;
-            cell2.innerText = computerSelect;
+            span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
+            arr[1] = userChoice;
+            cell2.innerText = userChoice;
             winner();
             computerEnter();
         }
@@ -463,7 +495,13 @@ function forCell2() {
 function forCell3() {
     if (val === userChoice) {
         if (check(2)) {
-            val = computerSelect;
+            if(userChoice === 'X'){
+                cell3.style.color = 'green';
+            }
+            else{
+                cell3.style.color = 'white';
+            }
+            // val = computerSelect;
             span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
             arr[2] = userChoice;
             cell3.innerText = userChoice;
@@ -473,10 +511,16 @@ function forCell3() {
     }
     else {
         if (check(2)) {
-            val = userChoice;
-            span.innerText = player1 + ' turn ' + ' with ' + " " + userChoice;
-            arr[2] = computerSelect;
-            cell3.innerText = computerSelect;
+            if(userChoice === 'X'){
+                cell3.style.color = 'green';
+            }
+            else{
+                cell3.style.color = 'white';
+            }
+            // val = userChoice;
+            span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
+            arr[2] = userChoice;
+            cell3.innerText = userChoice;
             winner();
             computerEnter();
         }
@@ -485,6 +529,12 @@ function forCell3() {
 function forCell4() {
     if (val === userChoice) {
         if (check(3)) {
+            if(userChoice === 'X'){
+                cell4.style.color = 'green';
+            }
+            else{
+                cell4.style.color = 'white';
+            }
             val = computerSelect;
             span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
             arr[3] = userChoice;
@@ -495,10 +545,16 @@ function forCell4() {
     }
     else {
         if (check(3)) {
-            val = userChoice;
-            span.innerText = player1 + ' turn ' + ' with ' + " " + userChoice;
-            arr[3] = computerSelect;
-            cell4.innerText = computerSelect;
+            if(userChoice === 'X'){
+                cell4.style.color = 'green';
+            }
+            else{
+                cell4.style.color = 'white';
+            }
+            // val = userChoice;
+            span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
+            arr[3] = userChoice;
+            cell4.innerText = userChoice;
             winner();
             computerEnter();
         }
@@ -507,8 +563,14 @@ function forCell4() {
 function forCell5() {
     if (val === userChoice) {
         if (check(4)) {
+            if(userChoice === 'X'){
+                cell5.style.color = 'green';
+            }
+            else{
+                cell5.style.color = 'white';
+            }
             span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
-            val = computerSelect;
+            // val = computerSelect;
             arr[4] = userChoice;
             cell5.innerText = userChoice;
             winner();
@@ -517,10 +579,15 @@ function forCell5() {
     }
     else {
         if (check(4)) {
-            span.innerText = player1 + ' turn ' + ' with ' + " " + userChoice;
-            val = userChoice;
-            arr[4] = computerSelect;
-            cell5.innerText = computerSelect;
+            if(userChoice === 'X'){
+                cell5.style.color = 'green';
+            }
+            else{
+                cell5.style.color = 'white';
+            }
+            span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
+            arr[4] = userChoice;
+            cell5.innerText = userChoice;
             winner();
             computerEnter();
         }
@@ -529,8 +596,13 @@ function forCell5() {
 function forCell6() {
     if (val === userChoice) {
         if (check(5)) {
-            span.innerText = player2 + ' turn ' + ' with ' + " 0'S " + computerSelect;
-            val = computerSelect;
+            if(userChoice === 'X'){
+                cell6.style.color = 'green';
+            }
+            else{
+                cell6.style.color = 'white';
+            }
+            span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
             arr[5] = userChoice;
             cell6.innerText = userChoice;
             winner();
@@ -539,10 +611,15 @@ function forCell6() {
     }
     else {
         if (check(5)) {
-            span.innerText = player1 + ' turn ' + ' with ' + " X'S " + userChoice;
-            val = userChoice;
-            arr[5] = computerSelect;
-            cell6.innerText = computerSelect;
+            if(userChoice === 'X'){
+                cell6.style.color = 'green';
+            }
+            else{
+                cell6.style.color = 'white';
+            }
+            span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
+            arr[5] = userChoice;
+            cell6.innerText = userChoice;
             winner();
             computerEnter();
         }
@@ -551,8 +628,13 @@ function forCell6() {
 function forCell7() {
     if (val === userChoice) {
         if (check(6)) {
+            if(userChoice === 'X'){
+                cell7.style.color = 'green';
+            }
+            else{
+                cell7.style.color = 'white';
+            }
             span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
-            val = computerSelect;
             arr[6] = userChoice;
             cell7.innerText = userChoice;
             winner();
@@ -561,10 +643,15 @@ function forCell7() {
     }
     else {
         if (check(6)) {
-            span.innerText = player1 + ' turn ' + ' with ' + " " + userChoice;
-            val = userChoice;
-            arr[6] = computerSelect;
-            cell7.innerText = computerSelect;
+            if(userChoice === 'X'){
+                cell7.style.color = 'green';
+            }
+            else{
+                cell7.style.color = 'white';
+            }
+            span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
+            arr[6] = userChoice;
+            cell7.innerText = userChoice;
             winner();
             computerEnter();
         }
@@ -573,8 +660,13 @@ function forCell7() {
 function forCell8() {
     if (val === userChoice) {
         if (check(7)) {
-            span.innerText = player2 + ' turn ' + ' with ' + " 0'S " + computerSelect;
-            val = computerSelect;
+            if(userChoice === 'X'){
+                cell8.style.color = 'green';
+            }
+            else{
+                cell8.style.color = 'white';
+            }
+            span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
             arr[7] = userChoice;
             cell8.innerText = userChoice;
             winner();
@@ -583,10 +675,15 @@ function forCell8() {
     }
     else {
         if (check(7)) {
-            span.innerText = player1 + ' turn ' + ' with ' + " " + userChoice;
-            val = userChoice;
-            arr[7] = computerSelect;
-            cell8.innerText = computerSelect;
+            if(userChoice === 'X'){
+                cell8.style.color = 'green';
+            }
+            else{
+                cell8.style.color = 'white';
+            }
+            span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
+            arr[7] = userChoice;
+            cell8.innerText = userChoice;
             winner();
             computerEnter();
         }
@@ -595,8 +692,13 @@ function forCell8() {
 function forCell9() {
     if (val === userChoice) {
         if (check(8)) {
+            if(userChoice === 'X'){
+                cell9.style.color = 'green';
+            }
+            else{
+                cell9.style.color = 'white';
+            }
             span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
-            val = computerSelect;
             arr[8] = userChoice;
             cell9.innerText = userChoice;
             winner();
@@ -605,10 +707,15 @@ function forCell9() {
     }
     else {
         if (check(8)) {
-            span.innerText = player1 + ' turn ' + ' with ' + " " + userChoice;
-            val = userChoice;
-            arr[8] = computerSelect;
-            cell9.innerText = computerSelect;
+            if(userChoice === 'X'){
+                cell9.style.color = 'green';
+            }
+            else{
+                cell9.style.color = 'white';
+            }
+            span.innerText = player2 + ' turn ' + ' with ' + " " + computerSelect;
+            arr[8] = userChoice;
+            cell9.innerText = userChoice;
             winner();
             computerEnter();
         }
